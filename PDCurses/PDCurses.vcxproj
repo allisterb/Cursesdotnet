@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1147622C-9768-43F7-A3DE-F16AD60C1F1B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PDCurses</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;PDCDEBUG;PDC_WIDE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>C:\ASP.NET\Curses.NET\pdcurses\win32a;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <ModuleDefinitionFile>
+      </ModuleDefinitionFile>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+    <Text Include="win32a\pdcurses\diff.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="win32a\pdcurses\addch.c" />
+    <ClCompile Include="win32a\pdcurses\addchstr.c" />
+    <ClCompile Include="win32a\pdcurses\addstr.c" />
+    <ClCompile Include="win32a\pdcurses\attr.c" />
+    <ClCompile Include="win32a\pdcurses\beep.c" />
+    <ClCompile Include="win32a\pdcurses\bkgd.c" />
+    <ClCompile Include="win32a\pdcurses\border.c" />
+    <ClCompile Include="win32a\pdcurses\clear.c" />
+    <ClCompile Include="win32a\pdcurses\color.c" />
+    <ClCompile Include="win32a\pdcurses\debug.c" />
+    <ClCompile Include="win32a\pdcurses\delch.c" />
+    <ClCompile Include="win32a\pdcurses\deleteln.c" />
+    <ClCompile Include="win32a\pdcurses\deprec.c" />
+    <ClCompile Include="win32a\pdcurses\getch.c" />
+    <ClCompile Include="win32a\pdcurses\getstr.c" />
+    <ClCompile Include="win32a\pdcurses\getyx.c" />
+    <ClCompile Include="win32a\pdcurses\inch.c" />
+    <ClCompile Include="win32a\pdcurses\inchstr.c" />
+    <ClCompile Include="win32a\pdcurses\initscr.c" />
+    <ClCompile Include="win32a\pdcurses\inopts.c" />
+    <ClCompile Include="win32a\pdcurses\insch.c" />
+    <ClCompile Include="win32a\pdcurses\insstr.c" />
+    <ClCompile Include="win32a\pdcurses\instr.c" />
+    <ClCompile Include="win32a\pdcurses\kernel.c" />
+    <ClCompile Include="win32a\pdcurses\keyname.c" />
+    <ClCompile Include="win32a\pdcurses\mouse.c" />
+    <ClCompile Include="win32a\pdcurses\move.c" />
+    <ClCompile Include="win32a\pdcurses\outopts.c" />
+    <ClCompile Include="win32a\pdcurses\overlay.c" />
+    <ClCompile Include="win32a\pdcurses\pad.c" />
+    <ClCompile Include="win32a\pdcurses\panel.c" />
+    <ClCompile Include="win32a\pdcurses\printw.c" />
+    <ClCompile Include="win32a\pdcurses\refresh.c" />
+    <ClCompile Include="win32a\pdcurses\scanw.c" />
+    <ClCompile Include="win32a\pdcurses\scroll.c" />
+    <ClCompile Include="win32a\pdcurses\scr_dump.c" />
+    <ClCompile Include="win32a\pdcurses\slk.c" />
+    <ClCompile Include="win32a\pdcurses\termattr.c" />
+    <ClCompile Include="win32a\pdcurses\terminfo.c" />
+    <ClCompile Include="win32a\pdcurses\touch.c" />
+    <ClCompile Include="win32a\pdcurses\util.c" />
+    <ClCompile Include="win32a\pdcurses\window.c" />
+    <ClCompile Include="win32a\win32\pdcclip.c" />
+    <ClCompile Include="win32a\win32\pdcdisp.c" />
+    <ClCompile Include="win32a\win32\pdcgetsc.c" />
+    <ClCompile Include="win32a\win32\pdckbd.c" />
+    <ClCompile Include="win32a\win32\pdcscrn.c" />
+    <ClCompile Include="win32a\win32\pdcsetsc.c" />
+    <ClCompile Include="win32a\win32\pdcutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="win32a\curspriv.h" />
+    <ClInclude Include="win32a\win32\pdcwin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="win32a\win32\pdcurses.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
