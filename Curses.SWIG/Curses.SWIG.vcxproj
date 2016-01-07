@@ -91,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\pdcurses\include</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>stdbool.h</ForcedIncludeFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -100,16 +101,21 @@
     </Link>
     <PostBuildEvent>
       <Command>echo on
-copy "$(ProjectDir)_curses.dll" "$(SolutionDir)lib"
-copy "$(ProjectDir)_curses.cs" "$(SolutionDir)Bindings"
-copy "$(ProjectDir)_cursesPINVOKE.cs" "$(SolutionDir)Bindings"
-copy "$(ProjectDir)SWIGTYPE*.cs" "$(SolutionDir)Bindings"
+copy "$(TargetDir)_curses.dll" "$(SolutionDir)lib"
+copy "$(ProjectDir)*.cs" "$(SolutionDir)Bindings"
+copy "$(TargetDir)_curses.dll" "$(SolutionDir)Curses.Bindings.ConsoleTests\Bin\$(Configuration)"
+copy "$(ProjectDir)*.cs" "$(SolutionDir)Curses.Bindings.ConsoleTests"
+
 %40echo off
 </Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy library and bindings to solution directory.</Message>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>echo on
+swig -csharp $(ProjectDir)pdcurses.i</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
