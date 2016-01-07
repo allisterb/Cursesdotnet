@@ -71,6 +71,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetName>_curses</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -89,6 +90,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\pdcurses\include</AdditionalIncludeDirectories>
+      <ExceptionHandling>false</ExceptionHandling>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -96,6 +98,18 @@
       <AdditionalLibraryDirectories>..\pdcurses\win32\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>pdcurses.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>echo on
+copy "$(ProjectDir)_curses.dll" "$(SolutionDir)lib"
+copy "$(ProjectDir)_curses.cs" "$(SolutionDir)Bindings"
+copy "$(ProjectDir)_cursesPINVOKE.cs" "$(SolutionDir)Bindings"
+copy "$(ProjectDir)SWIGTYPE*.cs" "$(SolutionDir)Bindings"
+%40echo off
+</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Message>Copy library and bindings to solution directory.</Message>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -149,17 +163,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\pdcurses\include\curses.h" />
+    <ClInclude Include="..\pdcurses\include\panel.h" />
+    <ClInclude Include="..\pdcurses\include\term.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="pdcurses_wrap.c" />
     <ClCompile Include="stdafx.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="_curses_wrap.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SWIGTYPE_p_FILE.cs" />
@@ -172,6 +188,7 @@
     <None Include="SWIGTYPE_p_va_list.cs" />
     <None Include="SWIGTYPE_p_void.cs" />
     <None Include="SWIGTYPE_p_WINDOW.cs" />
+    <None Include="pdcurses.i" />
     <None Include="_curses.i" />
     <None Include="_form.i" />
     <None Include="_menu.i" />
