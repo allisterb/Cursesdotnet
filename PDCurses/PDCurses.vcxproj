@@ -202,6 +202,7 @@
     <ClCompile Include="win32a\win32\pdcutil.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="win32a\curses.h" />
     <ClInclude Include="win32a\curspriv.h" />
     <ClInclude Include="win32a\win32\pdcwin.h" />
   </ItemGroup>

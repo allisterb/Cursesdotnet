@@ -28,11 +28,11 @@ namespace Curses.Bindings.ConsoleTests
             else
             {
                 //_curses.("The pressed key is ");
-                //_curses.attron(_curses.);
+                _curses.attron((uint) _curses.A_BOLD);
                 _curses.printw(string.Format("{0}", ch));
                 //_curses.attroff(_curses.
             }
-            //_curses.B
+            //_curses.a_
             _curses.refresh();          /* Print it on to the real screen */
             _curses.wgetch(_curses.stdscr);            /* Wait for user input */
             _curses.endwin();           /* End curses mode		  */

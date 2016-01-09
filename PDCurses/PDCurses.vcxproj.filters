@@ -176,6 +176,9 @@
     <ClInclude Include="win32a\win32\pdcwin.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="win32a\curses.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="win32a\win32\pdcurses.rc">

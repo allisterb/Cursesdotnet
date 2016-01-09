@@ -50,7 +50,8 @@ PDCurses portable platform definitions list:
 #include <stdint.h>
 #include <stddef.h>
 #include <stdio.h>             /* Required by X/Open usage below */
-
+#include <stdbool.h>
+#include <inttypes.h>
 
 #ifdef PDC_WIDE
 # include <wchar.h>

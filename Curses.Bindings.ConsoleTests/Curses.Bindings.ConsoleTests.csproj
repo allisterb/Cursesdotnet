@@ -58,10 +58,12 @@
     <Compile Include="SWIGTYPE_p_MEVENT.cs" />
     <Compile Include="SWIGTYPE_p_mmask_t.cs" />
     <Compile Include="SWIGTYPE_p_MOUSE_STATUS.cs" />
+    <Compile Include="SWIGTYPE_p_p_uint32_t.cs" />
     <Compile Include="SWIGTYPE_p_p_unsigned_int.cs" />
     <Compile Include="SWIGTYPE_p_p_unsigned_long.cs" />
     <Compile Include="SWIGTYPE_p_SCREEN.cs" />
     <Compile Include="SWIGTYPE_p_short.cs" />
+    <Compile Include="SWIGTYPE_p_uint32_t.cs" />
     <Compile Include="SWIGTYPE_p_unsigned_int.cs" />
     <Compile Include="SWIGTYPE_p_unsigned_long.cs" />
     <Compile Include="SWIGTYPE_p_va_list.cs" />
