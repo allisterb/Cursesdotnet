@@ -51,6 +51,7 @@ PDCurses portable platform definitions list:
 #include <stddef.h>
 #include <stdio.h>             /* Required by X/Open usage below */
 
+
 #ifdef PDC_WIDE
 # include <wchar.h>
 #endif

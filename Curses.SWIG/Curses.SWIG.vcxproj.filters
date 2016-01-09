@@ -24,13 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\pdcurses\include\curses.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\pdcurses\include\panel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\pdcurses\include\term.h">
+    <ClInclude Include="..\PDCurses\win32a\curses.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
