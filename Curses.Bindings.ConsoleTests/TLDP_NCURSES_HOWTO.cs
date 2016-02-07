@@ -15,7 +15,6 @@ namespace Curses.Bindings.ConsoleTests
             _curses.raw();              /* Line buffering disabled	*/
             _curses.keypad(_curses.stdscr, true);       /* We get F1, F2 etc..		*/
             _curses.noecho();           /* Don't echo() while we do getch */
-
             _curses.printw("Type any character to see it in bold\n");
             ch = _curses.wgetch(_curses.stdscr);           /* If raw() hadn't been called
 					 * we have to press enter before it
@@ -28,7 +27,7 @@ namespace Curses.Bindings.ConsoleTests
             else
             {
                 //_curses.("The pressed key is ");
-                _curses.attron((uint) _curses.A_BOLD);
+                _curses.attron((uint) _curses.A_BOLD | (uint) _curses.A_REVERSE);
                 _curses.printw(string.Format("{0}", ch));
                 //_curses.attroff(_curses.
             }
