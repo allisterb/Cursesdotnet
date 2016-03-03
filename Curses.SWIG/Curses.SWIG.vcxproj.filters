@@ -79,8 +79,10 @@
     <None Include="SWIGTYPE_p_WINDOW.cs">
       <Filter>Source Files</Filter>
     </None>
-    <None Include="pdcurses.i">
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="pdcurses.i">
       <Filter>Source Files</Filter>
-    </None>
+    </CustomBuild>
   </ItemGroup>
 </Project>

@@ -49,6 +49,14 @@ PDCurses portable platform definitions list:
 
 **man-end****************************************************************/
 
+
+/*----------------------------------------------------------------------
+ *
+ *  PDCurses Manifest Constants
+ *
+ */
+#define ERR -1
+#define OK 0
  
 #define PDC_BUILD 3401
 #define PDCURSES        1      /* PDCurses-only routines */
@@ -61,6 +69,7 @@ PDCurses portable platform definitions list:
 
 
 /*----------------------------------------------------------------------*/
+
 
 
 /* typedefs */

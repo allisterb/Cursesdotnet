@@ -107,6 +107,8 @@ copy "$(TargetDir)_curses.*" "$(SolutionDir)Curses.Bindings.ConsoleTests\Bin\$(C
 copy "$(ProjectDir)*.cs" "$(SolutionDir)Curses.Bindings.ConsoleTests\"
 copy "$(TargetDir)_curses.*" "$(SolutionDir)Cursesdotnet\Bin\$(Configuration)"
 copy "$(ProjectDir)*.cs" "$(SolutionDir)Cursesdotnet"
+copy "$(TargetDir)_curses.*" "$(SolutionDir)Cursesdotnet.Tests\Bin\$(Configuration)"
+
 %40echo off
 </Command>
     </PostBuildEvent>
@@ -193,7 +195,9 @@ swig -csharp $(ProjectDir)pdcurses.i</Command>
     <None Include="SWIGTYPE_p_va_list.cs" />
     <None Include="SWIGTYPE_p_void.cs" />
     <None Include="SWIGTYPE_p_WINDOW.cs" />
-    <None Include="pdcurses.i" />
+    <CustomBuild Include="pdcurses.i">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="_curses.i" />
     <None Include="_form.i" />
     <None Include="_menu.i" />

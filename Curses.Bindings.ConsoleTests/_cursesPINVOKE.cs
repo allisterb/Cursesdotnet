@@ -190,6 +190,12 @@ class _cursesPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("_curses", EntryPoint="CSharp___PDCURSES___get")]
   public static extern int __PDCURSES___get();
 
+  [global::System.Runtime.InteropServices.DllImport("_curses", EntryPoint="CSharp_ERR_get")]
+  public static extern int ERR_get();
+
+  [global::System.Runtime.InteropServices.DllImport("_curses", EntryPoint="CSharp_OK_get")]
+  public static extern int OK_get();
+
   [global::System.Runtime.InteropServices.DllImport("_curses", EntryPoint="CSharp_PDC_BUILD_get")]
   public static extern int PDC_BUILD_get();
 

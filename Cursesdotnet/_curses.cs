@@ -1465,6 +1465,8 @@ public class _curses {
   }
 
   public static readonly int __PDCURSES__ = _cursesPINVOKE.__PDCURSES___get();
+  public static readonly int ERR = _cursesPINVOKE.ERR_get();
+  public static readonly int OK = _cursesPINVOKE.OK_get();
   public static readonly int PDC_BUILD = _cursesPINVOKE.PDC_BUILD_get();
   public static readonly int PDCURSES = _cursesPINVOKE.PDCURSES_get();
   public static readonly int XOPEN = _cursesPINVOKE.XOPEN_get();

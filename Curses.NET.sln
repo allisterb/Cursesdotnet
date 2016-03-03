@@ -26,6 +26,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cursesdotnet", "Cursesdotne
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cursesdotnet.Tests", "Cursesdotnet.Tests\Cursesdotnet.Tests.csproj", "{9825F210-6CE1-48C7-A6AC-4907F2A72EA2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0CE5E822-030A-4152-BF6A-4BFD75687755} = {0CE5E822-030A-4152-BF6A-4BFD75687755}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

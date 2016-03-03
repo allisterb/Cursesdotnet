@@ -13,9 +13,10 @@ namespace Cursesdotnet.Tests
         static void Main(string[] args)
         {
             Curses.InitScr();
-            int c =Curses.PrintW("test");
+            int c = Curses.PrintW("Hello World");
             Curses.Refresh();
             Curses.EndWin();
+            
         }
 
         public static void Example2()
