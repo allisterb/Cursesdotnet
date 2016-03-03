@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{55032568-5656-4CAD-AFE3-D1686EE1EDAC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{BD67680A-4881-4483-9949-EDEF703DDEA0}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Curses.Bindings.ConsoleTests</RootNamespace>
-    <AssemblyName>Curses.Bindings.ConsoleTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Cursesdotnet</RootNamespace>
+    <AssemblyName>Cursesdotnet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -46,7 +43,6 @@
     <Compile Include="Curses.cs" />
     <Compile Include="MEVENT.cs" />
     <Compile Include="MOUSE_STATUS.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SCREEN.cs" />
     <Compile Include="SWIGTYPE_p_attr_t.cs" />
@@ -70,16 +66,9 @@
     <Compile Include="SWIGTYPE_p_va_list.cs" />
     <Compile Include="SWIGTYPE_p_void.cs" />
     <Compile Include="SWIGTYPE_p_WINDOW.cs" />
-    <Compile Include="TLDP_NCURSES_HOWTO.cs" />
     <Compile Include="WINDOW.cs" />
     <Compile Include="_curses.cs" />
     <Compile Include="_cursesPINVOKE.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TLDP-NCURSES-HOWTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -87,7 +87,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PDCDEBUG;PDC_WIDE;CHTYPE_32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PDC_DEBUG;PDC_WIDE;CHTYPE_32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)PDCurses\win32a</AdditionalIncludeDirectories>
       <ExceptionHandling>false</ExceptionHandling>
@@ -105,7 +105,8 @@ copy "$(TargetDir)_curses.*" "$(SolutionDir)lib"
 copy "$(ProjectDir)*.cs" "$(SolutionDir)Bindings"
 copy "$(TargetDir)_curses.*" "$(SolutionDir)Curses.Bindings.ConsoleTests\Bin\$(Configuration)"
 copy "$(ProjectDir)*.cs" "$(SolutionDir)Curses.Bindings.ConsoleTests"
-
+copy "$(TargetDir)_curses.*" "$(SolutionDir)Cursesdotnet\Bin\$(Configuration)"
+copy "$(ProjectDir)*.cs" "$(SolutionDir)Cursesdotnet"
 %40echo off
 </Command>
     </PostBuildEvent>

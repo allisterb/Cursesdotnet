@@ -21,7 +21,6 @@
         ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
         CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE. */
-
 #include "curses.h"
 %}
 %include cpointer.i
@@ -165,7 +164,7 @@ extern MOUSE_STATUS  Mouse_status;
 extern  int          COLORS;
 extern  int          COLOR_PAIRS;
 extern  int          TABSIZE;
-extern  unsigned long acs_map[];    /* alternate character set map */
+extern  long acs_map[];    /* alternate character set map */
 extern  char         ttytype[];    /* terminal name/description */
 
 
@@ -439,7 +438,7 @@ fifteen bits,  five bits for each of the three channels) and background RGB
    'n' = 16-bit chtype; it gets the fallback set because no bit is
          available for A_ALTCHARSET */
 
-# define ACS_PICK(w, n) ((chtype)w | A_ALTCHARSET)
+#define ACS_PICK(w, n) ((unsigned long) w | A_ALTCHARSET)
 
 /* VT100-compatible symbols -- box chars */
 
@@ -993,7 +992,8 @@ extern int     erase(void);
 extern void    filter(void);
 extern int     flash(void);
 extern int     flushinp(void);
-chtype  getbkgd(WINDOW *);
+extern unsigned long  getbkgd(WINDOW *);
+extern int getch(void);
 extern int     getnstr(char *, int);
 extern int     getstr(char *);
 WINDOW *getwin(FILE *);
@@ -1234,3 +1234,4 @@ extern void GetBegYX(WINDOW *win,int *y,int *x)
 }
 
 %}
+
