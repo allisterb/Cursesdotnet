@@ -101,10 +101,10 @@
     </Link>
     <PostBuildEvent>
       <Command>echo on
-copy "$(TargetDir)_curses.*" "$(SolutionDir)lib"
-copy "$(ProjectDir)*.cs" "$(SolutionDir)Bindings"
+copy "$(TargetDir)_curses.*" "$(SolutionDir)lib\"
+copy "$(ProjectDir)*.cs" "$(SolutionDir)Bindings\"
 copy "$(TargetDir)_curses.*" "$(SolutionDir)Curses.Bindings.ConsoleTests\Bin\$(Configuration)"
-copy "$(ProjectDir)*.cs" "$(SolutionDir)Curses.Bindings.ConsoleTests"
+copy "$(ProjectDir)*.cs" "$(SolutionDir)Curses.Bindings.ConsoleTests\"
 copy "$(TargetDir)_curses.*" "$(SolutionDir)Cursesdotnet\Bin\$(Configuration)"
 copy "$(ProjectDir)*.cs" "$(SolutionDir)Cursesdotnet"
 %40echo off
